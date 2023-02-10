@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl font-bold;
+}
+
+h3 {
+  @apply text-xl md:text-2xl lg:text-3xl font-bold;
+}
+
+h4 {
+  @apply md:text-lg lg:text-2xl;
+}
+
+p {
+  @apply text-sm;
+}
+
+.container-normal {
+  @apply px-4 sm:px-8 md:px-12 lg:px-16;
+}
+
+.header-wrapper {
+  background-image: url('./assets/hea.jpg');
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 40px;
+  @apply flex flex-col;
+}
+
+.header-nav a {
+  @apply py-2 px-3 lg:px-4 rounded-full text-sm;
+  border: 1px solid #999999;
+}
+
+.header-nav a:hover {
+  border: 1px solid transparent;
+  background: linear-gradient(360deg, #009fe3 -19.72%, #f5c3b1 90.14%);
+  background-repeat: no-repeat;
+  @apply rounded-full text-white;
+}
+
+.header-nav-menu a + a {
+  @apply ml-2 lg:ml-4;
+}
+
+.header-nav-burger a + a {
+  @apply mt-4;
+}
+
+.header-nav-burger a {
+  @apply px-6;
+}
+
+.bg-shadow-gradient {
+  @apply absolute top-0 left-0 w-full h-full overflow-hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 33.85%,
+    rgba(0, 0, 0, 0.76) 100%
+  );
+}
+
+.demo-btn {
+  background: linear-gradient(360deg, #009fe3 -19.72%, #f5c3b1 90.14%);
+  border-radius: 100px;
+  padding: 15px 40px;
+  color: white;
+}
+
+.demo-btn:hover {
+  background: linear-gradient(360deg, #f5c3b1 -19.72%, #009fe3 90.14%);
+}
+
+.pic-pad {
+  @apply grid-cols-2 gap-4;
+}
+
+.pic-pad-large {
+  @apply grid-cols-4 gap-4;
+}
+
+.solutions-wrapper {
+  @apply px-4 sm:px-8 md:px-12 lg:px-16;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+}
+
+@media (min-width: 1296px){
+  .solutions-wrapper {
+    @apply mx-auto;
+  }
+}
+
+.solutions-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.solutions-wrapper div + div {
+  @apply ml-4;
+}
+
+.solution {
+  @apply w-[50vw] max-w-[280px];
+}
+
+.solution-pic {
+  @apply max-w-none;
+}
+
+#benefits {
+  background-image: url('./assets/benefits-bg.svg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefit-dot {
+  width: 64px;
+  height: 64px;
+  background-image: url('./assets/benefit.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.benefit {
+  @apply w-48 md:w-auto max-w-sm p-4;
+}
+
+.feature {
+  @apply md:grid md:grid-cols-5 gap-x-4 lg:gap-x-12;
+}
+
+.feature-text p {
+  @apply mt-2 ml-2 text-left;
+}
+
+.feature-text p:before {
+  content: '• ';
+}
+
+.feature-text p.feature-faded {
+  @apply text-gray-400 ml-8;
+}
+
+#contacts {
+  background: linear-gradient(0deg, #009fe3 -26.02%, #f5c3b1 83.71%);
+}
+
+@media (min-width: 768px) {
+  #contacts {
+    background: none;
+  }
+  .feedback-wrapper {
+    @apply mx-16 rounded-[40px];
+    background-image: url('./assets/feedback-bg.jpg');
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 40px;
+    @apply mb-8;
+  }
+}
+
+.userform input {
+  @apply bg-[#F5F5F5] rounded-md p-4 mt-2 text-sm;
+}
+
+.userform button {
+  @apply w-48 font-bold;
+}
+
+.error-span {
+  @apply text-red-500 text-left mt-1;
+}
+
+.success-span {
+  @apply text-base text-green-600;
+}
+
+.footer-nav a {
+  @apply text-sm;
+}
+
+.footer-nav a:hover {
+  @apply text-[#009fe3];
+}
+
+.footer-nav a + a {
+  @apply mt-4;
+}
+
+.footer-nav-large a{
+  @apply py-2 px-3 rounded-full text-sm mr-2 md:mb-2;
+  border: 1px solid #999999;
+}
+
+.footer-nav-large a:hover {
+  border: 1px solid transparent;
+  background: linear-gradient(360deg, #009fe3 -19.72%, #f5c3b1 90.14%);
+  background-repeat: no-repeat;
+  @apply rounded-full text-white;
+}
